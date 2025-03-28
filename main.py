@@ -1,4 +1,6 @@
 import streamlit as sl
+import pandas as pd
+tabel=pd.DataFrame({"column1":[1,2,3,4,5],"column2":[6,7,8,9,10]})
 
 sl.title("Welcom In Streamlit App")
 sl.subheader("This is my first stramlit App")
@@ -21,3 +23,9 @@ def hello():
 sl.code(code,language="python")
 
 sl.write("### this h3 tag")
+sl.metric(label="Wind Speed", value="120 ms⁻¹", delta="1.4 ms⁻¹")
+sl.table(tabel)
+sl.dataframe(tabel)
+sl.image("biryani.jpg",width=80,caption="Biryani",)
+sl.audio("mixkit-tech-house-vibes-130.mp3",start_time=0)
+sl.video("Bacteria_blue.mp4",)
